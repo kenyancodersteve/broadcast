@@ -17,11 +17,11 @@ console.log(`Using M-Pesa environment: ${MPESA_ENV}`);
 
 // 🔹 Serve frontend automatically on /
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+  res.sendFile(path.join(__dirname, "./frontend/index.html"));
 });
 
 // 🔹 Serve static assets (CSS/JS)
-app.use(express.static(path.join(__dirname, "../frontend")));
+app.use(express.static(path.join(__dirname, "./frontend")));
 
 // 🔹 API: Get Access Token
 app.post("/get-token", async (req, res) => {
