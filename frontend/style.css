@@ -1,0 +1,170 @@
+/* Professional M-Pesa setup styling */
+:root {
+  color-scheme: light;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #111827;
+  background: #f5f7fb;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5f7fb 0%, #e7edf7 100%);
+}
+
+.container {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.mpesa-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  color: #10693e;
+  background: rgba(16, 105, 62, 0.12);
+  border-radius: 18px;
+  font-size: 28px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  line-height: 1.05;
+  color: #111827;
+}
+
+h2 {
+  margin: 0 0 18px;
+  color: #0f5a34;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+section {
+  padding: 24px 0 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+input[type="text"],
+input[type="url"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d2d6dc;
+  border-radius: 14px;
+  background: #f8fafc;
+  color: #111827;
+  font-size: 0.96rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus {
+  outline: none;
+  border-color: #107b3f;
+  box-shadow: 0 0 0 4px rgba(16, 123, 63, 0.12);
+}
+
+button,
+.button-primary {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #107b3f 0%, #0c6b33 100%);
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 16px 28px rgba(16, 123, 63, 0.18);
+  width: fit-content;
+}
+
+button:hover,
+.button-primary:hover {
+  transform: translateY(-1px);
+  opacity: 0.98;
+}
+
+button:disabled,
+.button-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.feedback {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  border: 1px solid transparent;
+}
+
+.feedback.success {
+  background: #ecfdf5;
+  color: #0f5132;
+  border-color: #bbf7d0;
+}
+
+.feedback.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+footer {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin: 24px 16px;
+    padding: 24px;
+  }
+
+  .mpesa-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
